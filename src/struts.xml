@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <package name="struts2" extends="struts-default">
+		<action name="fileUpload" class="action.FileUploadAction">
+			<result name="success">/fileUploadResultPage.jsp</result>
+			<result name="input">/fileUploadPage.jsp</result>
+		</action>
+		<action name="someFileUpload" class="action.SomeFileUploadAction">
+			<param name="savePath">/upload</param>
+			<result name="success">/SomeFileUploadResultPage.jsp</result>
+			<result name="input">/fileUploadPage.jsp</result>
+		</action>
+    </package>
+</struts>
